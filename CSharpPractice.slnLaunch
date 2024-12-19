@@ -1,0 +1,22 @@
+[
+  {
+    "Name": "BasicLunch",
+    "Projects": [
+      {
+        "Path": "CSharpPractice\\CSharpPractice.csproj",
+        "Action": "Start",
+        "DebugTarget": "CSharpPractice"
+      }
+    ]
+  },
+  {
+    "Name": "Fibonacci",
+    "Projects": [
+      {
+        "Path": "CSharpPractice\\CSharpPractice.csproj",
+        "Action": "Start",
+        "DebugTarget": "CSharpPractice"
+      }
+    ]
+  }
+]
