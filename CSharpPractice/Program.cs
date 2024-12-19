@@ -5,48 +5,12 @@ class Program
 {
     static void Main(string[] args)
     {
-        //Console.WriteLine("Hello, World!");
-        //int a = 5;
-        //int b = 6;
-        //string str = "TEst test test test";
-        //int fact = 5;
-        //Console.WriteLine(countFactorial(fact));
-        //NewMethod(a, b);
-        //countProbils(str);
-        //static void NewMethod(int a, int b)
-        //{
-        //    int sum = a + b;
-        //    Console.WriteLine(sum);
-        //}
-        //static void countProbils(string str)
-        //{
-        //    int length = str.Length;
-        //    for (int i = 0; i < length; i++)
-        //    {
-        //        if (str[i] == ' ')
-        //            Console.WriteLine("Space found by index " + i);
-        //    }
-        //}
-        //static int countFactorial(int fact)
-        //{
-        //    if (fact == 0)
-        //    {
-        //        return 1;
-        //    }
-        //    return fact * countFactorial(fact - 1);
-        //}
-        //Console.WriteLine("Enter your surname: ");
-        //string surname = Console.ReadLine();
-        //Console.WriteLine("Enter your name: ");
-        //string name = Console.ReadLine();
-        //Console.WriteLine("Hello, " + name + "!" + " " + surname);
-        //Fibonacci fibonacci = new Fibonacci();
-        //fibonacci.GenerateFibonacciSeries(10);
         while (true) {
 
             Console.WriteLine("\nSelect an operation");
             Console.WriteLine("1. Count Fibonacci");
-            Console.WriteLine("2. Exit");
+            Console.WriteLine("2. Count Spaces");
+            Console.WriteLine("3. Exit");
             String choice = Console.ReadLine();
 
             switch (choice)
@@ -58,15 +22,22 @@ class Program
                     fibonacci.GenerateFibonacciSeries(n);
                     break;
                 case "2":
+                    CountSpaces countSpaces = new CountSpaces();
+                    Console.WriteLine("Enter a string:");
+                    string str = Console.ReadLine();
+                    countSpaces.countProbils(str);
+                    break;
+                case "3":
                     return;
                 default:
                     Console.WriteLine("Invalid choice");
                     break;
 
-                    Console.WriteLine("\nSelect an operation");
-                    Console.WriteLine("1. Count Fibonacci");
-                    Console.WriteLine("2. Exit");
-                    choice = Console.ReadLine();
+                Console.WriteLine("\nSelect an operation");
+                Console.WriteLine("1. Count Fibonacci");
+                Console.WriteLine("2. Count Spaces");
+                Console.WriteLine("3. Exit");
+                choice = Console.ReadLine();
             }
 
         }
