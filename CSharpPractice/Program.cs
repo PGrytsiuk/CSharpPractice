@@ -62,6 +62,11 @@ class Program
                 default:
                     Console.WriteLine("Invalid choice");
                     break;
+
+                    Console.WriteLine("\nSelect an operation");
+                    Console.WriteLine("1. Count Fibonacci");
+                    Console.WriteLine("2. Exit");
+                    choice = Console.ReadLine();
             }
 
         }
