@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpPractice.main.math_operation
+namespace CSharpPractice.main.string_operation
 {
     public class CountSpaces
     {
