@@ -12,8 +12,12 @@ class Program
             Console.WriteLine("\nSelect an operation");
             Console.WriteLine("1. Count Fibonacci");
             Console.WriteLine("2. Count Spaces");
+<<<<<<< HEAD
+            Console.WriteLine("3. Exit");
+=======
             Console.WriteLine("3. Sort array");
             Console.WriteLine("4. Exit");
+>>>>>>> master
             String choice = Console.ReadLine();
 
             switch (choice)
@@ -31,12 +35,15 @@ class Program
                     countSpaces.countProbils(str);
                     break;
                 case "3":
+<<<<<<< HEAD
+=======
                     ArraySort sortArray = new ArraySort();
                     Console.WriteLine("Enter the array elements separated by space:");
                     int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
                     sortArray.arraySort(arr);
                     break;
                 case "4":
+>>>>>>> master
                     return;
                 default:
                     Console.WriteLine("Invalid choice");
@@ -45,8 +52,12 @@ class Program
                 Console.WriteLine("\nSelect an operation");
                 Console.WriteLine("1. Count Fibonacci");
                 Console.WriteLine("2. Count Spaces");
+<<<<<<< HEAD
+                Console.WriteLine("3. Exit");
+=======
                 Console.WriteLine("3. Sort array");
                 Console.WriteLine("4. Exit");
+>>>>>>> master
                 choice = Console.ReadLine();
             }
 
