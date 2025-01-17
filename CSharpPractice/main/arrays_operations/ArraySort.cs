@@ -13,6 +13,5 @@ namespace CSharpPractice.main.arrays_operations
             Array.Sort(arr);
             Console.WriteLine("Array elements after sorting:" + string.Join(", ",arr));
         }
-
     }
 }

@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using CSharpPractice.main.arrays_operations;
 using CSharpPractice.main.math_operation;
+using CSharpPractice.main.simple_login;
 using CSharpPractice.main.string_operation;
 
 class Program
@@ -13,7 +14,8 @@ class Program
             Console.WriteLine("1. Count Fibonacci");
             Console.WriteLine("2. Count Spaces");
             Console.WriteLine("3. Sort array");
-            Console.WriteLine("4. Exit");
+            Console.WriteLine("4. Simple login");
+            Console.WriteLine("5. Exit");
             String choice = Console.ReadLine();
 
             switch (choice)
@@ -37,6 +39,10 @@ class Program
                     sortArray.arraySort(arr);
                     break;
                 case "4":
+                    SimpleLogin simpleLogin = new SimpleLogin();
+                    simpleLogin.Login();
+                    break;
+                case "5":
                     return;
                 default:
                     Console.WriteLine("Invalid choice");
@@ -46,11 +52,10 @@ class Program
                 Console.WriteLine("1. Count Fibonacci");
                 Console.WriteLine("2. Count Spaces");
                 Console.WriteLine("3. Sort array");
-                Console.WriteLine("4. Exit");
+                Console.WriteLine("4. Simple login");
+                Console.WriteLine("5. Exit");
                 choice = Console.ReadLine();
             }
-
         }
-        
     }
 }

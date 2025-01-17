@@ -17,6 +17,5 @@ namespace CSharpPractice.main.string_operation
                     Console.WriteLine("Space found by index " + i);
             }
         }
-
     }
 }
