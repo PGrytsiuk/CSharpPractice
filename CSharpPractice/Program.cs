@@ -1,4 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
+// See https://aka.ms/new-console-template for more information
 using CSharpPractice.main.arrays_operations;
 using CSharpPractice.main.math_operation;
 using CSharpPractice.main.simple_login;
