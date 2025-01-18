@@ -8,7 +8,7 @@ namespace CSharpPractice.main.string_operation
 {
     public class CountSpaces
     {
-        public void countProbils(string str)
+        public void CountProbils(string str)
         {
             int length = str.Length;
             for (int i = 0; i < length; i++)

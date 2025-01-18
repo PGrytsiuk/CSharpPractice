@@ -8,7 +8,7 @@ namespace CSharpPractice.main.arrays_operations
 {
     internal class ArraySort
     {
-        public void arraySort(int[] arr)
+        public void arraySortMethod(int[] arr)
         { 
             Array.Sort(arr);
             Console.WriteLine("Array elements after sorting:" + string.Join(", ",arr));
