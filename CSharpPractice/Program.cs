@@ -15,7 +15,8 @@ class Program
             Console.WriteLine("2. Count Spaces");
             Console.WriteLine("3. Sort array");
             Console.WriteLine("4. Simple login");
-            Console.WriteLine("5. Exit");
+            Console.WriteLine("5. Buble Sort");
+            Console.WriteLine("6. Exit");
             String choice = Console.ReadLine();
 
             switch (choice)
@@ -30,31 +31,38 @@ class Program
                     CountSpaces countSpaces = new CountSpaces();
                     Console.WriteLine("Enter a string:");
                     string str = Console.ReadLine();
-                    countSpaces.countProbils(str);
+                    countSpaces.CountProbils(str);
                     break;
                 case "3":
                     ArraySort sortArray = new ArraySort();
                     Console.WriteLine("Enter the array elements separated by space:");
                     int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
-                    sortArray.arraySort(arr);
+                    sortArray.arraySortMethod(arr);
                     break;
                 case "4":
                     SimpleLogin simpleLogin = new SimpleLogin();
                     simpleLogin.Login();
                     break;
                 case "5":
+                    BubbleSort bubbleSort = new BubbleSort();
+                    Console.WriteLine("Enter the array elements separated by space:");
+                    int[] arr1 = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
+                    bubbleSort.BubbleSortMethod(arr1);
+                    break;
+                case "6":
                     return;
                 default:
                     Console.WriteLine("Invalid choice");
                     break;
 
-                Console.WriteLine("\nSelect an operation");
-                Console.WriteLine("1. Count Fibonacci");
-                Console.WriteLine("2. Count Spaces");
-                Console.WriteLine("3. Sort array");
-                Console.WriteLine("4. Simple login");
-                Console.WriteLine("5. Exit");
-                choice = Console.ReadLine();
+                    Console.WriteLine("\nSelect an operation");
+                    Console.WriteLine("1. Count Fibonacci");
+                    Console.WriteLine("2. Count Spaces");
+                    Console.WriteLine("3. Sort array");
+                    Console.WriteLine("4. Simple login");
+                    Console.WriteLine("5. Buble Sort");
+                    Console.WriteLine("6. Exit");
+                    choice = Console.ReadLine();
             }
         }
     }
