@@ -16,7 +16,8 @@ class Program
             Console.WriteLine("3. Sort array");
             Console.WriteLine("4. Simple login");
             Console.WriteLine("5. Buble Sort");
-            Console.WriteLine("6. Exit");
+            Console.WriteLine("6. Arrays common elements");
+            Console.WriteLine("7. Exit");
             String choice = Console.ReadLine();
 
             switch (choice)
@@ -50,6 +51,16 @@ class Program
                     bubbleSort.BubbleSortMethod(arr1);
                     break;
                 case "6":
+                    CommonElements commonElements = new CommonElements();
+                    Console.WriteLine("Enter the first array elements separated by space:");
+                    int[] arr2 = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
+                    Console.WriteLine("Enter the second array elements separated by space:");
+                    int[] arr3 = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
+                    //commonElements.CommonElementsMethod(arr2, arr3);
+                    //commonElements.CommonElementsMethod2(arr2, arr3);
+                    commonElements.CommonElementsMethod3(arr2, arr3);
+                    break;
+                case "7":
                     return;
                 default:
                     Console.WriteLine("Invalid choice");
@@ -61,7 +72,8 @@ class Program
                     Console.WriteLine("3. Sort array");
                     Console.WriteLine("4. Simple login");
                     Console.WriteLine("5. Buble Sort");
-                    Console.WriteLine("6. Exit");
+                    Console.WriteLine("6. Arrays common elements");
+                    Console.WriteLine("7. Exit");
                     choice = Console.ReadLine();
             }
         }
