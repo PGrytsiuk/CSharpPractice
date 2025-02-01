@@ -18,6 +18,10 @@ class Program
             Console.WriteLine("5. Exit");
             String choice = Console.ReadLine();
             NewMethod(choice);
+            if (choice == "5" )
+            {
+                break;
+            }
         }
     }
 
