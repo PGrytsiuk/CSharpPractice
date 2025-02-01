@@ -11,7 +11,7 @@ namespace CSharpPractice.main.arrays_operations
         public void arraySortMethod(int[] arr)
         { 
             Array.Sort(arr);
-            Console.WriteLine("Array elements after sorting:" + string.Join(", ",arr));
+            Console.WriteLine("Array elements after sorting: " + string.Join(", ",arr));
         }
     }
 }
