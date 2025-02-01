@@ -133,8 +133,6 @@ class Program
                 SimpleLogin simpleLogin = new SimpleLogin();
                 simpleLogin.Login();
                 break;
-            case "5":
-                return;
             default:
                 Console.WriteLine("Invalid choice");
                 break;
