@@ -18,6 +18,10 @@ class Program
             Console.WriteLine("5. Exit");
             String choice = Console.ReadLine();
             NewMethod(choice);
+            if (choice == "5" )
+            {
+                break;
+            }
         }
     }
 
@@ -129,8 +133,6 @@ class Program
                 SimpleLogin simpleLogin = new SimpleLogin();
                 simpleLogin.Login();
                 break;
-            case "5":
-                return;
             default:
                 Console.WriteLine("Invalid choice");
                 break;
