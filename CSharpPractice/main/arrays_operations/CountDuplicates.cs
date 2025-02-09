@@ -25,7 +25,7 @@ namespace CSharpPractice.main.arrays_operations
                     : 0;
                 if (count > 1)
                 {
-                    Console.WriteLine(key + " - " + count);
+                    Console.WriteLine("Element: " + key + " - Count: " + count);
                 }
             }
         }
