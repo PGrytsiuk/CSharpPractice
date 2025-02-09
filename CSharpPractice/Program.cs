@@ -35,6 +35,7 @@ class Program
                 Console.WriteLine("2. Array Sort");
                 Console.WriteLine("3. Find common elements in array");
                 Console.WriteLine("4. Count duplicates in array");
+                Console.WriteLine("5. Find duplicates integers in array");
                 string selectedArrayOperation = Console.ReadLine();
                 switch (selectedArrayOperation)
                 {
@@ -84,6 +85,12 @@ class Program
                         Console.WriteLine("Enter the array elements separated by space:");
                         int[] arr8 = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
                         countDuplicates.CountDuplicatesMethod(arr8);
+                        break;
+                    case "5":
+                        Console.WriteLine("Enter the array elements separated by space:");
+                        int[] arr9 = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
+                        HashSet<int> duplicates = FindDuplicatesIntegers.FindDuplicates(arr9);
+                        Console.WriteLine("Duplicates are: " + string.Join(", ", duplicates));
                         break;
                 }
                 break;
