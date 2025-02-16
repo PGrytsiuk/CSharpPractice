@@ -36,6 +36,7 @@ class Program
                 Console.WriteLine("3. Find common elements in array");
                 Console.WriteLine("4. Count duplicates in array");
                 Console.WriteLine("5. Find duplicates integers in array");
+                Console.WriteLine("6. Find missing number");
                 string selectedArrayOperation = Console.ReadLine();
                 switch (selectedArrayOperation)
                 {
@@ -91,6 +92,11 @@ class Program
                         int[] arr9 = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
                         HashSet<int> duplicates = FindDuplicatesIntegers.FindDuplicates(arr9);
                         Console.WriteLine("Duplicates are: " + string.Join(", ", duplicates));
+                        break;
+                    case "6":
+                        Console.WriteLine("Enter the array row separated by space with missing elements inside");
+                        int[] arr10 = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
+                        FindMissingNumbers.FindMissingNumberMethod(arr10);
                         break;
                 }
                 break;
