@@ -37,6 +37,8 @@ class Program
                 Console.WriteLine("4. Count duplicates in array");
                 Console.WriteLine("5. Find duplicates integers in array");
                 Console.WriteLine("6. Find missing number");
+                Console.WriteLine("7. Find largest number");
+                Console.WriteLine("8. Merge two arrays");
                 string selectedArrayOperation = Console.ReadLine();
                 switch (selectedArrayOperation)
                 {
@@ -97,6 +99,18 @@ class Program
                         Console.WriteLine("Enter the array row separated by space with missing elements inside");
                         int[] arr10 = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
                         FindMissingNumbers.FindMissingNumberMethod(arr10);
+                        break;
+                    case "7":
+                        Console.WriteLine("Enter the array elements separated by space:");
+                        int[] arr11 = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
+                        FindLargestElemeintInArray.FindLargestElementMethod(arr11);
+                        break;
+                    case "8":
+                        Console.WriteLine("Enter the first array elements separated by space:");
+                        int[] arr12 = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
+                        Console.WriteLine("Enter the second array elements separated by space:");
+                        int[] arr13 = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
+                        MergeTwoArrays.MergeTwoArraysMethod(arr12, arr13);
                         break;
                 }
                 break;
