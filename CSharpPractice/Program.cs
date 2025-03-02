@@ -40,6 +40,7 @@ class Program
                 Console.WriteLine("7. Find largest number");
                 Console.WriteLine("8. Merge two arrays");
                 Console.WriteLine("9. Remove Dublicates from the array");
+                Console.WriteLine("10. Find second largest element in the array");
                 string selectedArrayOperation = Console.ReadLine();
                 switch (selectedArrayOperation)
                 {
@@ -130,6 +131,12 @@ class Program
                                 removeDuplicatesInArray.RemoveDuplicatesWithStreams(arr15);
                                 break;
                         }
+                        break;
+                    case "10":
+                        Console.WriteLine("Enter the array elements separated by space:");
+                        int[] arr16 = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
+                        int secondLargest = FindSecondLargestArray.FindSecondLargestElementInArrayMethod(arr16);
+                        Console.WriteLine("Second largest element in the array is: " + string.Join(",", secondLargest));
                         break;
                 }
                 break;
