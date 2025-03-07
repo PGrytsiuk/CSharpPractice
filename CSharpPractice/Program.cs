@@ -150,6 +150,7 @@ class Program
                 Console.WriteLine("\nSelect an math operation");
                 Console.WriteLine("1. Fibonacci");
                 Console.WriteLine("2. Factorial");
+                Console.WriteLine("3. Armstrong number");
                 string selectedMathOperation = Console.ReadLine();
                 switch (selectedMathOperation)
                 {
@@ -164,6 +165,12 @@ class Program
                         Console.WriteLine("Enter the number to calculate factorial:");
                         int num = Convert.ToInt32(Console.ReadLine());
                         factorial.FactorialMethod(num);
+                        break;
+                    case "3":
+                        
+                        Console.WriteLine("Enter the number to check if it is Armstrong number:");
+                        int num1 = Convert.ToInt32(Console.ReadLine());
+                        ArmstrongNumber.CheckArmStrongNumber(num1);
                         break;
                 }
                 break;
