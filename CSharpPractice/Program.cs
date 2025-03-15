@@ -151,6 +151,7 @@ class Program
                 Console.WriteLine("1. Fibonacci");
                 Console.WriteLine("2. Factorial");
                 Console.WriteLine("3. Armstrong number");
+                Console.WriteLine("4. Convert to Binary number");
                 string selectedMathOperation = Console.ReadLine();
                 switch (selectedMathOperation)
                 {
@@ -171,6 +172,12 @@ class Program
                         Console.WriteLine("Enter the number to check if it is Armstrong number:");
                         int num1 = Convert.ToInt32(Console.ReadLine());
                         ArmstrongNumber.CheckArmStrongNumber(num1);
+                        break;
+                    case "4":
+                        Console.WriteLine("Enter the number to convert to binary:");
+                        int num2 = Convert.ToInt32(Console.ReadLine());
+                        string binaryResult = ConvertToBinary.ConvertToBinaryMethod(num2);
+                        Console.WriteLine("Binary number is: " + binaryResult);
                         break;
                 }
                 break;
