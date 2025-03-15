@@ -151,6 +151,9 @@ class Program
                 Console.WriteLine("1. Fibonacci");
                 Console.WriteLine("2. Factorial");
                 Console.WriteLine("3. Armstrong number");
+                Console.WriteLine("4. Convert to Binary number");
+                Console.WriteLine("5. Factorial using recursion");
+                Console.WriteLine("6. Find even numbers in array");
                 string selectedMathOperation = Console.ReadLine();
                 switch (selectedMathOperation)
                 {
@@ -171,6 +174,23 @@ class Program
                         Console.WriteLine("Enter the number to check if it is Armstrong number:");
                         int num1 = Convert.ToInt32(Console.ReadLine());
                         ArmstrongNumber.CheckArmStrongNumber(num1);
+                        break;
+                    case "4":
+                        Console.WriteLine("Enter the number to convert to binary:");
+                        int num2 = Convert.ToInt32(Console.ReadLine());
+                        string binaryResult = ConvertToBinary.ConvertToBinaryMethod(num2);
+                        Console.WriteLine("Binary number is: " + binaryResult);
+                        break;
+                    case "5":
+                        Console.WriteLine("Enter the factorial number");
+                        int num3 = Convert.ToInt32(Console.ReadLine());
+                        int factorialResult = FactorialRecursion.FactorialRecursionMethod(num3);
+                        Console.WriteLine("Factorial of " + num3 + " is: " + factorialResult);
+                        break;
+                    case "6":
+                        Console.WriteLine("Enter the array elements separated by space:");
+                        int[] arr18 = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
+                        FindEvenNumber.FindEvenNumberMethod(arr18);
                         break;
                 }
                 break;
