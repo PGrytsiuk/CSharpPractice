@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CSharpPractice.main.math_operation
+﻿namespace CSharpPractice.main.math_operation
 {
-    internal class FactorialRecursion
+    public class FactorialRecursion
     {
+        public static int FactorialRecursionMethod(int factorial)
+        {
+            if (factorial == 0)
+            {
+                return 1;
+            }
+            return factorial * FactorialRecursionMethod(factorial - 1);
+        }
     }
 }
