@@ -154,6 +154,7 @@ class Program
                 Console.WriteLine("4. Convert to Binary number");
                 Console.WriteLine("5. Factorial using recursion");
                 Console.WriteLine("6. Find even numbers in array");
+                Console.WriteLine("7. Find GCD of two numbers");
                 string selectedMathOperation = Console.ReadLine();
                 switch (selectedMathOperation)
                 {
@@ -191,6 +192,14 @@ class Program
                         Console.WriteLine("Enter the array elements separated by space:");
                         int[] arr18 = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
                         FindEvenNumber.FindEvenNumberMethod(arr18);
+                        break;
+                    case "7":
+                        Console.WriteLine("Enther first number:");
+                        int num4 = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enther second number:");
+                        int num5 = Convert.ToInt32(Console.ReadLine());
+                        int gcd = FindGCDofTwoIntegers.FindGCDofTwoItegersMethod(num4, num5);
+                        Console.WriteLine("GCD of " + num4 + " and " + num5 + " is: " + gcd);
                         break;
                 }
                 break;
