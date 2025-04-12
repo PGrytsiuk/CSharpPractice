@@ -155,6 +155,7 @@ class Program
                 Console.WriteLine("5. Factorial using recursion");
                 Console.WriteLine("6. Find even numbers in array");
                 Console.WriteLine("7. Find GCD of two numbers");
+                Console.WriteLine("8. Year is leap year");
                 string selectedMathOperation = Console.ReadLine();
                 switch (selectedMathOperation)
                 {
@@ -200,6 +201,11 @@ class Program
                         int num5 = Convert.ToInt32(Console.ReadLine());
                         int gcd = FindGCDofTwoIntegers.FindGCDofTwoItegersMethod(num4, num5);
                         Console.WriteLine("GCD of " + num4 + " and " + num5 + " is: " + gcd);
+                        break;
+                    case "8":
+                        Console.WriteLine("Enter the year to check if it is a leap year:");
+                        int year = Convert.ToInt32(Console.ReadLine());
+                        YearIsLeap.YearIsLeapMethod(year);
                         break;
                 }
                 break;
