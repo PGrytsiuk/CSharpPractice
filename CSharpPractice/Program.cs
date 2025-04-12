@@ -156,6 +156,7 @@ class Program
                 Console.WriteLine("6. Find even numbers in array");
                 Console.WriteLine("7. Find GCD of two numbers");
                 Console.WriteLine("8. Year is leap year");
+
                 string selectedMathOperation = Console.ReadLine();
                 switch (selectedMathOperation)
                 {
