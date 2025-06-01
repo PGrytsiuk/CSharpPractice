@@ -1,7 +1,7 @@
 // See https://aka.ms/new-console-template for more information
 using CSharpPractice.main.arrays_operations;
 using CSharpPractice.main.math_operation;
-using CSharpPractice.main.simple_login;
+using CSharpPractice.main.simple_apps;
 using CSharpPractice.main.string_operation;
 
 class Program
@@ -14,7 +14,7 @@ class Program
             Console.WriteLine("1. Array operations");
             Console.WriteLine("2. Math operations");
             Console.WriteLine("3. String operations");
-            Console.WriteLine("4. Simple login");
+            Console.WriteLine("4. Simple apps");
             Console.WriteLine("5. Exit");
             String choice = Console.ReadLine();
             NewMethod(choice);
@@ -232,8 +232,54 @@ class Program
                 }
                 break;
             case "4":
-                SimpleLogin simpleLogin = new SimpleLogin();
-                simpleLogin.Login();
+                Console.WriteLine("\nSelect an app");
+                Console.WriteLine("1. Simple login");
+                Console.WriteLine("2. Stopwatch");
+                string selectedApp = Console.ReadLine();
+                switch (selectedApp)
+                {
+                    case "1":
+                        SimpleLogin simpleLogin = new SimpleLogin();
+                        simpleLogin.Login();
+                        break;
+                    case "2":
+                        Stopwatch stopwatch = new Stopwatch();
+                        while (true)
+                        {
+                            Console.WriteLine("Press Enter to start the stopwatch, or Esc to exit.");
+                            var key = Console.ReadKey(intercept:true);
+
+                            if (key.Key == ConsoleKey.Escape)
+                                break;
+                            if (key.Key == ConsoleKey.Enter)
+                            {
+                                try
+                                {
+                                    stopwatch.Start();
+                                    Console.WriteLine("---Stopwatch is running---");
+                                    Console.WriteLine("Press Enter to stop the stopwatch, or Esc to exit.");
+                                    Console.ReadLine();
+                                    stopwatch.Stop();
+                                    Console.WriteLine($"Elapsed time: {stopwatch.ElapsedTime.Seconds} seconds");
+                                }
+                                catch (Exception ex)
+                                {
+                                    Console.WriteLine("An error occurred: " + ex.Message);
+                                }
+                            }
+                            Console.WriteLine("Press R to reset the Stopwatch or Enter to continue");
+                            var resetKey = Console.ReadKey(intercept: true);
+
+                            if (resetKey.Key == ConsoleKey.R)
+                            {
+                                Console.WriteLine("Time is reset");
+                                stopwatch.Reset();
+                            }
+                        }
+                        break;
+                }
+                break;
+            case "5":
                 break;
             default:
                 Console.WriteLine("Invalid choice");
