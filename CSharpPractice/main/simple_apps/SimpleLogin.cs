@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpPractice.main.simple_login
+namespace CSharpPractice.main.simple_apps
 {
     public class SimpleLogin
     {
