@@ -235,6 +235,7 @@ class Program
                 Console.WriteLine("\nSelect an app");
                 Console.WriteLine("1. Simple login");
                 Console.WriteLine("2. Stopwatch");
+                Console.WriteLine("3. Post class");
                 string selectedApp = Console.ReadLine();
                 switch (selectedApp)
                 {
@@ -276,6 +277,23 @@ class Program
                                 stopwatch.Reset();
                             }
                         }
+                        break;
+                    case"3":
+                        Post myPost = new Post(
+                        "Hello World",
+                        "This is my first post using the Post class.",
+                        DateTime.Now);
+                        Console.WriteLine("Title " + myPost.Title);
+                        myPost.DisplayPost();
+                        myPost.Title = "Updated Title";
+                        myPost.Description = "This is an updated description for my post.";
+                        myPost.PublishDate = DateTime.Now.AddDays(1);
+                        myPost.UpVote();
+                        myPost.UpVote();
+                        myPost.UpVote();
+                        myPost.DownVote();
+                        myPost.DisplayVotes();
+                        myPost.DisplayPost();
                         break;
                 }
                 break;
