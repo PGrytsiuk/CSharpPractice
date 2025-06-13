@@ -42,6 +42,8 @@ class Program
                 Console.WriteLine("9. Remove Dublicates from the array");
                 Console.WriteLine("10. Find second largest element in the array");
                 Console.WriteLine("11. Selection sort");
+                Console.WriteLine("12. FuzzBizz");
+                Console.WriteLine("13. Stack");
                 string selectedArrayOperation = Console.ReadLine();
                 switch (selectedArrayOperation)
                 {
@@ -143,6 +145,27 @@ class Program
                         Console.WriteLine("Enter the array elements separated by space:");
                         int[] arr17 = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
                         SelectionSort.SelectionSortMethod(arr17);
+                        break;
+                    case "12":
+                        Console.WriteLine("Enter the number to play FuzzBizz:");
+                        int[] fuzzBizzArr = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
+                        FuzzBizz.FuzzBizzOperation(fuzzBizzArr);
+                        break;
+                    case "13":
+                        var stack = new Stack();
+                        stack.Push(1);
+                        stack.Push(2);
+                        stack.Push(3);
+                        stack.Push("Hello");
+                        stack.Push(new DateTime(1997, 12, 26));
+                        stack.Push(4);
+
+                        Console.WriteLine(stack.Pop());
+                        Console.WriteLine(stack.Pop());
+                        Console.WriteLine(stack.Pop());
+                        Console.WriteLine(stack.Pop());
+                        Console.WriteLine(stack.Pop());
+                        stack.Clear();
                         break;
                 }
                 break;
