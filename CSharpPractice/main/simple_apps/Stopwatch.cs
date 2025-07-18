@@ -23,18 +23,19 @@ namespace CSharpPractice.main.simple_apps
         { 
             if(!_isRunning) throw new InvalidOperationException("Stopwatch is not running.");
             _duration += DateTime.Now - _startTime;
-              _isRunning = false;
+            _isRunning = false;
         }
 
         public TimeSpan ElapsedTime
         {
-            get 
+            get
             {
                 var elapsedTime = _duration;
                 if (_isRunning)
-                   elapsedTime += DateTime.Now - _startTime;
+                    elapsedTime += DateTime.Now - _startTime;
                 return elapsedTime;
             }
+
         }
 
         public void Reset()
