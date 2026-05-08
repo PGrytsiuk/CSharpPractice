@@ -3,3 +3,32 @@
 # Ignore the bin and obj folders
 bin/
 obj/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Secrets and tokens (IMPORTANT!)
+.env
+.env.local
+.env.*.local
+*.key
+*.token
+secrets.json
+appsettings.Development.json
+
+# Test Results
+[Tt]est[Rr]esult*/
+*.trx
+*.coverage
+
+# Visual Studio Code
+.vscode/
+
+# Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
