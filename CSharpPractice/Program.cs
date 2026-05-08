@@ -18,7 +18,7 @@ class Program
             Console.WriteLine("5. Exit");
             String choice = Console.ReadLine();
             NewMethod(choice);
-            if (choice == "5" )
+            if (choice == "5")
             {
                 break;
             }
@@ -179,6 +179,7 @@ class Program
                 Console.WriteLine("6. Find even numbers in array");
                 Console.WriteLine("7. Find GCD of two numbers");
                 Console.WriteLine("8. Year is leap year");
+                Console.WriteLine("9. Fibonacci via LinQ");
 
                 string selectedMathOperation = Console.ReadLine();
                 switch (selectedMathOperation)
@@ -196,7 +197,7 @@ class Program
                         factorial.FactorialMethod(num);
                         break;
                     case "3":
-                        
+
                         Console.WriteLine("Enter the number to check if it is Armstrong number:");
                         int num1 = Convert.ToInt32(Console.ReadLine());
                         ArmstrongNumber.CheckArmStrongNumber(num1);
@@ -219,9 +220,9 @@ class Program
                         FindEvenNumber.FindEvenNumberMethod(arr18);
                         break;
                     case "7":
-                        Console.WriteLine("Enther first number:");
+                        Console.WriteLine("Enter first number:");
                         int num4 = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("Enther second number:");
+                        Console.WriteLine("Enter second number:");
                         int num5 = Convert.ToInt32(Console.ReadLine());
                         int gcd = FindGCDofTwoIntegers.FindGCDofTwoItegersMethod(num4, num5);
                         Console.WriteLine("GCD of " + num4 + " and " + num5 + " is: " + gcd);
@@ -231,12 +232,19 @@ class Program
                         int year = Convert.ToInt32(Console.ReadLine());
                         YearIsLeap.YearIsLeapMethod(year);
                         break;
+                    case "9":
+                        Console.WriteLine("Enter the number of Fibonacci numbers to generate:");
+                        int sequence = Convert.ToInt32(Console.ReadLine());
+                        var sequenceFibonacci = FibonacciLinQ.FibonacciViaLinq(sequence);
+                        Console.WriteLine("Fibonacci sequence via the Linq: " + string.Join(", ", sequenceFibonacci));
+                        break;
                 }
                 break;
             case "3":
                 Console.WriteLine("\nSelect an string operation");
                 Console.WriteLine("1. Count spaces");
                 Console.WriteLine("2. Reverse string");
+                Console.WriteLine("3. Count vowels");
                 string selectedStringOperation = Console.ReadLine();
                 switch (selectedStringOperation)
                 {
@@ -252,6 +260,9 @@ class Program
                         string str1 = Console.ReadLine();
                         reverseString.ReverseStringMethod(str1);
                         break;
+                    case "3":
+                        CountVowels.CountVowelsMethod();
+                        break;
                 }
                 break;
             case "4":
@@ -259,6 +270,23 @@ class Program
                 Console.WriteLine("1. Simple login");
                 Console.WriteLine("2. Stopwatch");
                 Console.WriteLine("3. Post class");
+                Console.WriteLine("4. Show sum of previously entered numbers");
+                Console.WriteLine("5. Image validator");
+                Console.WriteLine("6. Show the max number between two numbers");
+                Console.WriteLine("7. Show numbers between 1 and 100 devisible by 3");
+                Console.WriteLine("8. Guess number game");
+                Console.WriteLine("9. Max number in array");
+                Console.WriteLine("10. Name reverse");
+                Console.WriteLine("11. Sorting unique numbers");
+                Console.WriteLine("12. Display unique numbers");
+                Console.WriteLine("13. Display five list of elements with three smallest elements in the list");
+                Console.WriteLine("14. Display Facebook names");
+                Console.WriteLine("15. Show consecutive row");
+                Console.WriteLine("16. App show if sequence contains duplicates");
+                Console.WriteLine("17. Enter valid time");
+                Console.WriteLine("18. PascalCase");
+                Console.WriteLine("19. File operations");
+                Console.WriteLine("20. How old are you app");
                 string selectedApp = Console.ReadLine();
                 switch (selectedApp)
                 {
@@ -271,7 +299,7 @@ class Program
                         while (true)
                         {
                             Console.WriteLine("Press Enter to start the stopwatch, or Esc to exit.");
-                            var key = Console.ReadKey(intercept:true);
+                            var key = Console.ReadKey(intercept: true);
 
                             if (key.Key == ConsoleKey.Escape)
                                 break;
@@ -301,7 +329,7 @@ class Program
                             }
                         }
                         break;
-                    case"3":
+                    case "3":
                         Post myPost = new Post(
                         "Hello World",
                         "This is my first post using the Post class.",
@@ -317,6 +345,98 @@ class Program
                         myPost.DownVote();
                         myPost.DisplayVotes();
                         myPost.DisplayPost();
+                        break;
+                    case "4":
+                        SumOfPreviouslyCalulatedNumbers.SumOfPreviouslyCalulatedNumbersMethod();
+                        break;
+                    case "5":
+                        try
+                        {
+                            Console.WriteLine("Enter height");
+                            var height = int.Parse(Console.ReadLine());
+                            Console.WriteLine("Enter width");
+                            var width = int.Parse(Console.ReadLine());
+                            ImageValidator.ImageValidatorMethod(height, width);
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine("Invalid input");
+                        }
+                        break;
+                    case "6":
+                        try
+                        {
+                            Console.WriteLine("Enter first number ");
+                            var number1 = int.Parse(Console.ReadLine());
+                            Console.WriteLine("Enter second number ");
+                            var number2 = int.Parse(Console.ReadLine());
+                            ShowTheMaxBetweenTwoNumbers.ShowTheMaxBetweenTwoNumbersMethod(number1, number2);
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine("Invalid input");
+                        }
+                        break;
+                    case "7":
+                        NumbersDevisibleBy3.NumbersDevisibleBy3Method();
+                        break;
+                    case "8":
+                        Console.WriteLine("Enter number");
+                        GuessNumberGame.GuessNumberGameMethod();
+                        break;
+                    case "9":
+                        try
+                        {
+                            Console.WriteLine("Enter an array separated by comma");
+                            int[] array = Array.ConvertAll(Console.ReadLine().Split(','), int.Parse);
+                            FindMaxNumberInArray.FindMaxNumberInArrayMethod(array);
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine("Invalid input");
+                        }
+                        break;
+                    case "10":
+                        Console.WriteLine("Enter your name to reverse");
+                        var inputName = Console.ReadLine().ToCharArray();
+                        var inputNameAsStringArray = inputName.Select(c => c.ToString()).ToArray();
+                        NameReverse.NameReverseMethod(inputNameAsStringArray);
+                        break;
+                    case "11":
+                        SortEnteredNumbers.SortEnteredNumbersMethod();
+                        break;
+                    case "12":
+                        DisplayUniqueNumbers.DisplayUniqueNumbersMethod();
+                        break;
+                    case "13":
+                        DisplayThreeSmallestNumInList.DisplayThreeSmallestNumInListMethod();
+                        break;
+                    case "14":
+                        DisplayNameFacebook.DisplayNameFacebookMethod();
+                        break;
+                    case "15":
+                        ShowIfRowIsConsecutive.ShowIfRowIsConsecutiveMethod();
+                        break;
+                    case "16":
+                        Duplicate.DuplicateMethod();
+                        break;
+                    case "17":
+                        ValidTime.ValidTimeMethod();
+                        break;
+                    case "18":
+                        PascalCase.PascalCaseMethod();
+                        break;
+                    case "19":
+                        Console.WriteLine("Enter file name");
+                        var fileName = Console.ReadLine();
+                        FilesManipulation.FilesManipulationMethod(fileName);
+                        break;
+                    case "20": 
+                        Console.WriteLine("Enter your birth year");
+                        var birthYear = int.Parse(Console.ReadLine());
+                        Console.WriteLine("Enter the year you want to know your age in");
+                        var expectedYear = int.Parse(Console.ReadLine());
+                        HowOldAreYouApp.WhatIsYourAge(birthYear, expectedYear);
                         break;
                 }
                 break;

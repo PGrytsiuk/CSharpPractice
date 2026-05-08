@@ -1,0 +1,1 @@
+This code splits the input into words, trims each word, removes empty entries, and collects the result in a list. It’s a common pattern for robustly handling user input with unpredictable spacing.
